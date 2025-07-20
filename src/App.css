@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@plugin "daisyui";
+body {
+  font-family: "Fira Code", monospace;
+}
+
+.animated-gradient {
+  background: linear-gradient(270deg, #ff7e5f, #feb47b, #18181b);
+  background-size: 600% 600%;
+  animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

@@ -44,8 +44,8 @@ function Home() {
         >
           <span className="flex  items-center flex-row gap-2">
             <h1 className="text-xl md:text-3xl font-bold">Who am I?</h1>
-            <div className="badge badge-sm badge-outline badge-success">
-              Available for working
+            <div className="badge badge-sm badge-outline  badge-success whitespace-nowrap">
+              Currently Available
             </div>
           </span>
 

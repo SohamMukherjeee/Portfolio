@@ -1,17 +1,12 @@
+import SohamFoot from "./assets/Sascii.png";
 function Footer() {
   return (
-    <footer className="bg-black text-white font-mono p-4 text-sm text-center pb-20">
-      <pre className="whitespace-pre-wrap leading-none">
-        {`
-███████╗ ██████╗ ██╗  ██╗ █████╗ ███╗   ███╗
-██╔════╝██╔═══██╗██║  ██║██╔══██╗████╗ ████║
-███████╗██║   ██║███████║███████║██╔████╔██║
-╚════██║██║   ██║██╔══██║██╔══██║██║╚██╔╝██║
-███████║╚██████╔╝██║  ██║██║  ██║██║ ╚═╝ ██║
-╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝
-`}
-      </pre>
-    </footer>
+    <>
+      <div className="block pb-10 ">
+        <img src={SohamFoot} alt="ASCII Logo" className="mx-auto" />
+      </div>
+      {/* <pre className="hidden sm:block">{`...ascii here...`}</pre> */}
+    </>
   );
 }
 

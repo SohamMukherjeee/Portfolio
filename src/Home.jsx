@@ -40,7 +40,7 @@ function Home() {
           data-aos="fade-right"
           data-aos-offset="300"
           data-aos-easing="ease-in-sine"
-          className="whoami rounded-xl md:col-span-2 md:row-span-2 bg-[#18181B] text-white text-left px-6 py-5"
+          className="whoami rounded-xl md:col-span-2 md:row-span-2 bg-[#0f0f0f] text-white p-6 shadow-md border border-white/10 font-mono  text-left px-6 py-5"
         >
           <span className="flex  items-center flex-row gap-2">
             <h1 className="text-xl md:text-3xl font-bold">Who am I?</h1>
@@ -61,7 +61,7 @@ function Home() {
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="700"
-          className="porichoi rounded-xl md:col-span-1 md:row-span-4 bg-[#18181B] text-white text-center py-6"
+          className="porichoi rounded-xl md:col-span-1 md:row-span-4 bg-[#0f0f0f]  p-6 shadow-md border border-white/10 text-white text-center py-6"
         >
           <h1 className="text-lg md:text-2xl font-bold">Social Links</h1>
           <div className="space-y-8 mt-8">
@@ -100,7 +100,7 @@ function Home() {
             "data-aos-offset": "300",
             "data-aos-delay": "450",
           })}
-          className="role rounded-xl md:col-span-1 md:row-span-2 bg-[#0D3C52] text-white text-center shadow-lg py-10"
+          className="role rounded-xl md:col-span-1 md:row-span-2 bg-[#0D3C52]/30   p-6  border border-white/10 text-white text-center shadow-lg py-10"
         >
           <h1 className="text-lg md:text-2xl font-bold pt-3">
             Student & Full Stack <br />
@@ -109,7 +109,7 @@ function Home() {
         </div>
 
         {/* Avatar & Name */}
-        <div className="name rounded-xl md:col-span-1 md:row-span-3 bg-[#18181B] backdrop-blur-md text-white flex flex-col justify-center items-center py-10">
+        <div className="name rounded-xl md:col-span-1 md:row-span-3 bg-[#0f0f0f]  p-6 shadow-md border border-white/10 backdrop-blur-md text-white flex flex-col justify-center items-center py-10">
           <RxAvatar className="text-6xl md:text-7xl" />
           <h1 className="text-2xl md:text-3xl font-bold mt-6">
             Soham Mukherjee
@@ -121,7 +121,7 @@ function Home() {
           data-aos="fade-up"
           data-aos-anchor-placement="bottom-bottom"
           data-aos-delay="500"
-          className="techstack relative  rounded-xl md:col-span-1 md:row-span-3 bg-[#18181B] text-white px-6 py-5"
+          className="techstack relative  rounded-xl md:col-span-1 md:row-span-3 bg-[#0f0f0f] p-6 shadow-md border border-white/10 text-white px-6 py-5"
         >
           <h1 className="text-sm md:text-xl font-bold">
             Technologies I have worked with
@@ -153,7 +153,7 @@ function Home() {
           data-aos="fade-left"
           data-aos-delay="500"
           onClick={() => navigate("/Project")}
-          className="proj animated-gradient rounded-xl md:col-span-1 md:row-span-1 hover:opacity-90 transition duration-300 text-white text-center py-5 cursor-pointer"
+          className="proj animated-gradient rounded-xl md:col-span-1 md:row-span-1 hover:opacity-90 transition duration-300 text-white text-center py-5 cursor-pointer  p-6 shadow-md border border-white/10"
         >
           <h1 className="flex justify-center items-center gap-x-3 text-xl md:text-2xl font-bold">
             See the projects
@@ -166,7 +166,7 @@ function Home() {
           data-aos="fade-up"
           data-aos-anchor-placement="bottom-bottom"
           data-aos-duration="1000"
-          className="edu rounded-xl md:col-span-1 md:row-span-2 bg-[#18181B] text-white px-6 py-5"
+          className="edu rounded-xl md:col-span-1 md:row-span-2 bg-[#0f0f0f] text-white  p-6 shadow-md border border-white/10 px-6 py-5"
         >
           <h1 className="text-lg md:text-2xl font-bold">Education</h1>
           <p className="text-sm md:text-md mt-2">
@@ -193,7 +193,7 @@ function Home() {
               "_blank"
             )
           }
-          className="cv group  rounded-xl md:col-span-1 md:row-span-2 bg-[#18181B] text-white text-center hover:bg-[#26262B] cursor-pointer py-10"
+          className="cv group  rounded-xl md:col-span-1 md:row-span-2 bg-[#0f0f0f] text-white p-6 shadow-md border border-white/10 text-center hover:bg-[#26262B] cursor-pointer py-10"
           title="Redirect to Resume"
         >
           <h1 className="text-xl md:text-3xl font-bold flex items-center justify-center flex-col">

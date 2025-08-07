@@ -5,6 +5,7 @@ import Home from "./Home";
 import Project from "./Project";
 import TechStack from "./TechStack";
 import ProjectDetail from "./ProjectDetail";
+import ContactForm from "./ContactForm";
 function App() {
   return (
     <Router>
@@ -14,6 +15,7 @@ function App() {
         <Route path="/Project" element={<Project />} />
         <Route path="/techstack" element={<TechStack />} />
         <Route path="/projects/:slug" element={<ProjectDetail />} />
+        <Route path="/contact" element={<ContactForm />} />
       </Routes>
     </Router>
   );

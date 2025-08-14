@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "emailjs-com";
-import imgCon from "./assets/himosbananas_A_weird_minimal_illustration_in_neon_colors_usin_ce477da2-24fe-4df7-95b4-8951dc6cdb67_2.png";
+import imgCon from "../assets/himosbananas_A_weird_minimal_illustration_in_neon_colors_usin_ce477da2-24fe-4df7-95b4-8951dc6cdb67_2.png";
 export default function ContactForm() {
   const form = useRef();
 

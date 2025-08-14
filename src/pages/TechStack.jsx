@@ -1,5 +1,5 @@
-import Footer from "./Footer";
-import TechCategory from "./TechCategory";
+import Footer from "../components/Footer";
+import TechCategory from "../components/TechCategory";
 import { useNavigate } from "react-router-dom";
 
 import {

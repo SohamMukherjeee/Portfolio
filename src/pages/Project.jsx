@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import Footer from "./Footer";
-import ProjectCard from "./ProjectCard";
+import Footer from "../components/Footer";
+import ProjectCard from "../components/ProjectCard";
 
-import summup from "./assets/summup.png";
+import summup from "../assets/summup.png";
 function Project() {
   const navigate = useNavigate();
   return (

@@ -1,11 +1,11 @@
 // App.jsx
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ScrollToTop from "./ScrollToTop";
-import Home from "./Home";
-import Project from "./Project";
-import TechStack from "./TechStack";
-import ProjectDetail from "./ProjectDetail";
-import ContactForm from "./ContactForm";
+import ScrollToTop from "./components/ScrollToTop";
+import Home from "./pages/Home";
+import Project from "./pages/Project";
+import TechStack from "./pages/TechStack";
+import ProjectDetail from "./pages/ProjectDetail";
+import ContactForm from "./components/ContactForm";
 function App() {
   return (
     <Router>

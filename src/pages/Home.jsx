@@ -1,6 +1,6 @@
 import { useState } from "react";
-import "./App.css";
-import TechIcon from "./TechIcon";
+import "../styles/App.css"; // Ensure that 'App.css' exists in 'src/styles'
+import TechIcon from "../components/TechIcon";
 import { useNavigate } from "react-router-dom";
 import { RxAvatar } from "react-icons/rx";
 import {
@@ -24,7 +24,9 @@ import {
   FaLinkedin,
   FaDharmachakra,
 } from "react-icons/fa";
-import MobileNotice from "./MobileNotice";
+import { SlEnvolopeLetter } from "react-icons/sl";
+
+import MobileNotice from "../components/MobileNotice";
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init();
@@ -58,6 +60,7 @@ function Home() {
               experience in the MERN stack. I'm currently seeking internship and
               full time opportunities.
             </p>
+            <span className="absolute inset-0.5 rounded-xl border border-white/5 pointer-events-none"></span>
           </div>
 
           {/* Social Links */}
@@ -104,6 +107,7 @@ function Home() {
                 </h1>
               </div>
             </div>
+            <span className="absolute inset-0.5 rounded-xl border border-white/5 pointer-events-none"></span>
           </div>
 
           {/* Role */}
@@ -119,27 +123,30 @@ function Home() {
               Student & Full Stack <br />
               Developer
             </h1>
+            <span className="absolute inset-0.5 rounded-xl border border-[#0D3C52]/20 pointer-events-none"></span>
           </div>
 
           {/* Avatar & Name */}
-          <div className="name rounded-xl md:col-span-1 md:row-span-3 bg-[#0f0f0f]  p-6 shadow-md border border-white/10 backdrop-blur-md text-white flex flex-col justify-center items-center py-10">
+          <div className="name relative rounded-xl md:col-span-1 md:row-span-3 bg-[#0f0f0f] p-6 shadow-md border border-white/10 backdrop-blur-md text-white flex flex-col justify-center items-center py-10">
             <RxAvatar className="text-6xl md:text-7xl" />
             <h1 className="text-2xl md:text-3xl font-bold mt-6">
               Soham Mukherjee
             </h1>
+            <span className="absolute inset-0.5 rounded-xl border border-white/5 pointer-events-none"></span>
           </div>
+          {/* Contact me */}
           <div
             data-aos="fade-left"
             data-aos-offset="300"
             data-aos-easing="ease-in-sine"
             className="porichoi rounded-xl md:col-span-1 md:row-span-2 bg-[#0f0f0f]  p-6 shadow-md border border-white/10 text-white text-center py-6"
           >
-            <h1
-              className="text-lg  font-bold hover:underline cursor-pointer"
+            <h1 className="text-lg  font-bold ">Contact me</h1>
+            <SlEnvolopeLetter
+              className="inline-block mt-5 h-10 w-10 text-[#757A83] hover:text-white cursor-pointer"
               onClick={() => navigate("/contact")}
-            >
-              Contact me
-            </h1>
+            />
+            <span className="absolute inset-0.5 rounded-xl border border-white/5 pointer-events-none"></span>
           </div>
 
           {/* Tech Stack */}
@@ -172,6 +179,7 @@ function Home() {
             >
               see more
             </h2>
+            <span className="absolute inset-0.5 rounded-xl border border-white/5 pointer-events-none"></span>
           </div>
 
           {/* Projects Button */}
@@ -184,6 +192,7 @@ function Home() {
             <h1 className="flex justify-center items-center gap-x-3 text-xl md:text-2xl font-bold">
               projects
             </h1>
+            <span className="absolute inset-0.5 rounded-xl border border-white/5 pointer-events-none"></span>
           </div>
 
           {/* Education */}
@@ -206,6 +215,7 @@ function Home() {
             <p className="italic text-sm text-[#757A83]">
               B.Tech in Computer Science (AIML)
             </p>
+            <span className="absolute inset-0.5 rounded-xl border border-white/5 pointer-events-none"></span>
           </div>
 
           {/* Resume */}
@@ -228,6 +238,7 @@ function Home() {
               </div>
             </h1>
             <FaExternalLinkAlt className="absolute top-4 right-4 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <span className="absolute inset-0.5 rounded-xl border border-white/5 pointer-events-none"></span>
           </div>
         </div>
       </div>

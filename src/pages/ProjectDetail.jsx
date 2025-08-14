@@ -1,7 +1,7 @@
 // src/ProjectDetail.jsx
 import { useParams, useNavigate } from "react-router-dom";
-import projects from "./Data/projectsData";
-import Footer from "./Footer";
+import projects from "../Data/projectsData";
+import Footer from "../components/Footer";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import GitHubButton from "react-github-btn";
 

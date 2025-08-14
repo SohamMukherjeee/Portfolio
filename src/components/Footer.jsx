@@ -1,4 +1,4 @@
-import SohamFoot from "./assets/Sascii.png";
+import SohamFoot from "../assets/Sascii.png";
 function Footer() {
   return (
     <>

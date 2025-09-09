@@ -30,17 +30,25 @@ import MobileNotice from "../components/MobileNotice";
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init();
+import { useHotkeys } from "react-hotkeys-hook";
 
 function Home() {
   const navigate = useNavigate();
   const isMobile = window.innerWidth < 768;
+  useHotkeys(
+    "ctrl+1",
+    (event) => {
+      event.preventDefault();
+      navigate("/techstack");
+    },
+    { enableOnFormTags: true }
+  );
 
   return (
     <>
       <MobileNotice />
-
       <div className="flex justify-center items-center min-h-screen w-full bg-black overflow-x-hidden overflow-y-auto sm:overflow-y-hidden">
-        <div className="grid w-full h-full grid-cols-1 md:grid-cols-3 md:grid-rows-7 gap-4 md:gap-3 p-4 md:p-20 overflow-x-hidden overflow-y-auto md:overflow-y-hidden">
+        <div className="grid w-full h-full grid-cols-1 md:grid-cols-3 md:grid-rows-7 gap-4 md:gap-3 p-4 md:p-10 overflow-x-hidden overflow-y-auto md:overflow-y-hidden">
           {/* Who Am I */}
           <div
             data-aos="fade-right"

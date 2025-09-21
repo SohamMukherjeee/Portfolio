@@ -2,25 +2,38 @@ import { MdOutlineSchool } from "react-icons/md";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { RxAvatar } from "react-icons/rx";
+import FadeContent from "../components/FadeContent";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { useNavigate } from "react-router-dom";
 
 function MobileHome() {
+    const navigate = useNavigate();
+
   return (
     <>
-      <div className="flex justify-center items-center w-full bg-black overflow-x-hidden">
+
+      <div className="flex justify-center items-center w-full overflow-y-hidden bg-black overflow-x-hidden">
         <div className="grid grid-cols-3 grid-rows-5 gap-3 p-3 ">
           {/* who am i lodu */}
+
           <div className="col-span-2 row-span-2  text-white p-6 shadow-md border border-white/10 rounded-xl">
               {/* <div className="badge badge-sm badge-outline  badge-success whitespace-nowrap ">
                 Seeking opportunities
-              </div> */}
+                </div> */}
+                <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
 
             <h1 className="font-sans font-bold text-4xl text-[#605F5F]">Hello! <br /> <span className="text-3xl">I’m Soham.</span></h1>
             <p className="text-base md:text-md text-[#757A83] py-3 mt-2">
              <span className="text-white">Frontend </span>first, <span className="text-white"> full stack </span>when needed.
             </p>
+                            </FadeContent>
+
           </div>
+
           {/* social linkss */}
           <div className="col-span-1 row-span-2  bg-[#0f0f0f] text-white p-6 shadow-md border border-white/10 rounded-2xl">
+                          <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+
             <h1 className="text-md font-bold text-center">Social Links</h1>
             <div className=" space-y-6 flex flex-col  mt-6">
               <div className="tooltip tooltip-bottom	" data-tip="linkedin/soham">
@@ -58,6 +71,7 @@ function MobileHome() {
                 </h1>
               </div>
             </div>
+            </FadeContent>
           </div>
           {/* Resume */}
           <div className="col-span-1 row-span-1 bg-[#0f0f0f] text-white p-6 shadow-md border border-white/10 rounded-2xl">
@@ -69,9 +83,23 @@ function MobileHome() {
             <h1 className="text-md">Soham Mukherjee</h1>
           </div>
           {/* project */}
-          <div className="col-span-2 row-span-2 bg-[#0f0f0f] text-white p-6 shadow-md border border-white/10 rounded-2xl">
-            project
-          </div>
+<div className="col-span-2 row-span-2 bg-[#0f0f0f] text-white shadow-md border border-white/10 rounded-2xl relative overflow-hidden"
+onClick={() => navigate('/project')}
+>
+
+  <p className="text-lg font-semibold m-6">project</p>
+                  <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+
+  <div className="absolute right-0 flex items-center mt-9 opacity-30">
+    <DotLottieReact
+      className="w-[280px] h-auto"
+      src="https://lottie.host/801c718e-2814-43b3-913a-6a9c6a6823c1/Rnvl5ESZQB.lottie"
+      loop
+      autoplay
+    />
+  </div>
+                  </FadeContent>
+</div>
           {/* educationnn */}
           <div
             className="col-span-1 row-span-1 bg-[#0f0f0f] text-white p-2 shadow-md border border-white/10 rounded-2xl flex flex-col justify-center items-center"
@@ -80,7 +108,8 @@ function MobileHome() {
             <h1 className="text-center text-md">Education</h1>
             <MdOutlineSchool className="text-4xl" />
             <dialog id="my_modal_2" className="modal ">
-              <div className="modal-box bg-black">
+
+              <div className="modal-box bg-[#0f0f0f] border-1 border-white/10">
                 <p className="text-sm md:text-md mt-2">
                   College (2022-2026)
                   <span className="italic text-xs ml-2">
@@ -107,6 +136,7 @@ function MobileHome() {
           </div>
         </div>
       </div>
+
     </>
   );
 }

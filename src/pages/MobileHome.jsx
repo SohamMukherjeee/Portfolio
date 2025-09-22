@@ -1,18 +1,17 @@
 import { MdOutlineSchool } from "react-icons/md";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin,  FaFolder,FaStackOverflow ,
+ } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { RxAvatar } from "react-icons/rx";
 import FadeContent from "../components/FadeContent";
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { useNavigate } from "react-router-dom";
-
 function MobileHome() {
     const navigate = useNavigate();
 
   return (
     <>
-
-      <div className="flex justify-center items-center w-full overflow-y-hidden bg-black overflow-x-hidden">
+      <div className="flex justify-center items-center w-full overflow-y-hidden bg-black overflow-x-hidden  pb-9">
         <div className="grid grid-cols-3 grid-rows-5 gap-3 p-3 ">
           {/* who am i lodu */}
 
@@ -74,11 +73,23 @@ function MobileHome() {
             </FadeContent>
           </div>
           {/* Resume */}
-          <div className="col-span-1 row-span-1 bg-[#0f0f0f] text-white p-6 shadow-md border border-white/10 rounded-2xl">
-            Resume
+          <div className="col-span-1 row-span-1 bg-[#0f0f0f] text-[#757A83] p-6 shadow-md border border-white/10 rounded-2xl flex flex-col justify-center items-center"
+                      onClick={() =>
+              window.open(
+                "https://drive.google.com/file/d/1S3TncZ31tiSZcVs91oAAtPnc6S36hJtq/view?usp=sharing",
+                "_blank"
+              )
+            }
+
+          >
+
+            <span className="text-sm">Resume</span>
+                            <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+            <  FaFolder className="h-10 w-6 "/>
+            </FadeContent>
           </div>
           {/* Student and devu */}
-          <div className="col-span-2 row-span-1 bg-[#0f0f0f] text-white p-6 shadow-md border border-white/10 rounded-2xl flex flex-col justify-center items-center gap-2">
+          <div className="col-span-2 row-span-1 bg-[#0f0f0f] text-[#757A83] p-6 shadow-md border border-white/10 rounded-2xl flex flex-col justify-center items-center gap-2">
             <RxAvatar className="text-6xl  " />
             <h1 className="text-md">Soham Mukherjee</h1>
           </div>
@@ -100,13 +111,19 @@ onClick={() => navigate('/project')}
   </div>
                   </FadeContent>
 </div>
-          {/* educationnn */}
+
+{/* educationnn */}
           <div
-            className="col-span-1 row-span-1 bg-[#0f0f0f] text-white p-2 shadow-md border border-white/10 rounded-2xl flex flex-col justify-center items-center"
+            className="col-span-1 row-span-1 bg-[#0f0f0f] text-[#757A83] p-2 shadow-md border border-white/10 rounded-2xl flex flex-col justify-center items-center"
             onClick={() => document.getElementById("my_modal_2").showModal()}
           >
-            <h1 className="text-center text-md">Education</h1>
+
+            <h1 className="text-center text-sm">Education</h1>
+                                                      <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+
             <MdOutlineSchool className="text-4xl" />
+            </FadeContent>
+
             <dialog id="my_modal_2" className="modal ">
 
               <div className="modal-box bg-[#0f0f0f] border-1 border-white/10">
@@ -130,9 +147,17 @@ onClick={() => navigate('/project')}
           </div>
 
           {/* Techstack */}
-          <div className="col-span-1 row-span-1 bg-[#0f0f0f] text-white p-6 shadow-md border border-white/10 rounded-2xl">
+          <div className="col-span-1 row-span-1 bg-[#0f0f0f] text-[#757A83] p-6 shadow-md border border-white/10 rounded-2xl flex flex-col justify-center items-center"
+                        onClick={() => navigate("/techstack")}
+
+          >
             {" "}
-            Techs
+
+            <h1 className="text-sm text-center">Techstack</h1>
+                              <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+                        <  FaStackOverflow  className="h-10 w-6 "/>
+                              </FadeContent>
+
           </div>
         </div>
       </div>

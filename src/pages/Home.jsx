@@ -31,7 +31,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init();
 import { useHotkeys } from "react-hotkeys-hook";
-
+import MobileHome from "./MobileHome";
 function Home() {
   const navigate = useNavigate();
   const isMobile = window.innerWidth < 768;
@@ -46,8 +46,11 @@ function Home() {
 
   return (
     <>
-      <MobileNotice />
-      <div className="flex justify-center items-center min-h-screen w-full bg-black overflow-x-hidden overflow-y-auto sm:overflow-y-hidden">
+      <div className="block sm:hidden">
+        <MobileHome />
+      </div>
+
+      <div className="hidden sm:flex justify-center items-center min-h-screen w-full bg-black overflow-x-hidden overflow-y-auto sm:overflow-y-hidden">
         <div className="grid w-full h-full grid-cols-1 md:grid-cols-3 md:grid-rows-7 gap-4 md:gap-3 p-4 md:p-10 overflow-x-hidden overflow-y-auto md:overflow-y-hidden">
           {/* Who Am I */}
           <div
@@ -137,16 +140,19 @@ function Home() {
           {/* Avatar & Name */}
           <div className="name relative rounded-xl md:col-span-1 md:row-span-3 bg-[#0f0f0f] p-6 shadow-md border border-white/10 backdrop-blur-md text-white flex flex-col justify-center items-center py-10">
             <RxAvatar className="text-6xl md:text-7xl" />
-            <h1 className="text-2xl md:text-3xl font-bold mt-6">
+            <h1 className="text-2xl md:text-3xl font-bold mt-6 text-center">
               Soham Mukherjee
             </h1>
             <span className="absolute inset-0.5 rounded-xl border border-white/5 pointer-events-none"></span>
           </div>
           {/* Contact me */}
           <div
-            data-aos="fade-left"
-            data-aos-offset="300"
-            data-aos-easing="ease-in-sine"
+            {...(!isMobile && {
+
+            "data-aos":"fade-left",
+            "data-aos-offset":"300",
+            "data-aos-delay":"450",  })}
+
             className="porichoi rounded-xl md:col-span-1 md:row-span-2 bg-[#0f0f0f]  p-6 shadow-md border border-white/10 text-white text-center py-6"
           >
             <h1 className="text-lg  font-bold ">Contact me</h1>
@@ -160,7 +166,7 @@ function Home() {
           {/* Tech Stack */}
           <div
             data-aos="fade-up"
-            data-aos-anchor-placement="bottom-bottom"
+//data-aos-anchor-placement="bottom-bottom"
             data-aos-delay="500"
             className="techstack relative  rounded-xl md:col-span-1 md:row-span-3 bg-[#0f0f0f] p-6 shadow-md border border-white/10 text-white px-6 py-5"
           >
@@ -193,7 +199,7 @@ function Home() {
           {/* Projects Button */}
           <div
             data-aos="fade-left"
-            data-aos-delay="500"
+          //  data-aos-delay="500"
             onClick={() => navigate("/Project")}
             className="proj animated-gradient rounded-xl md:col-span-1 md:row-span-1 hover:opacity-90 transition duration-300 text-white text-center py-5 cursor-pointer  p-6 shadow-md border border-white/10"
           >
@@ -206,7 +212,7 @@ function Home() {
           {/* Education */}
           <div
             data-aos="fade-up"
-            data-aos-anchor-placement="bottom-bottom"
+           // data-aos-anchor-placement="bottom-bottom"
             data-aos-duration="1000"
             className="edu rounded-xl md:col-span-1 md:row-span-2 bg-[#0f0f0f] text-white  p-6 shadow-md border border-white/10 px-6 py-5"
           >

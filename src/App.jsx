@@ -19,7 +19,6 @@ function App() {
         <Route path="/projects/:slug" element={<ProjectDetail />} />
         <Route path="/contact" element={<ContactForm />} />
         <Route path="/np" element={<Np />} />
-        <Route path="/mobile" element={<MobileHome />} />
       </Routes>
     </Router>
   );

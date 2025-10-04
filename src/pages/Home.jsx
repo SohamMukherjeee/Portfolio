@@ -32,6 +32,7 @@ import "aos/dist/aos.css";
 AOS.init();
 import { useHotkeys } from "react-hotkeys-hook";
 import MobileHome from "./MobileHome";
+import GlassFolder from "../components/GlassFolder";
 function Home() {
   const navigate = useNavigate();
   const isMobile = window.innerWidth < 768;
@@ -242,16 +243,15 @@ function Home() {
                 "_blank"
               )
             }
-            className="cv group  rounded-xl md:col-span-1 md:row-span-2 bg-[#0f0f0f] text-white p-6 shadow-md border border-white/10 text-center hover:bg-[#26262B] cursor-pointer py-10"
+            className="cv group  rounded-xl md:col-span-1 md:row-span-2 bg-[#0f0f0f] text-white p-6 shadow-md border border-white/10 text-center hover:cursor-pointer gap-y-3 flex justify-center items-center flex-col "
             title="Redirect to Resume"
           >
-            <h1 className="text-xl md:text-3xl font-bold flex items-center justify-center flex-col">
-              Resume
-              <div className="pt-2">
-                <FaFolder />
-              </div>
-            </h1>
-            <FaExternalLinkAlt className="absolute top-4 right-4 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <h1 className="text-xl">
+              Resume            
+              </h1>
+            <GlassFolder icon={<FaFolder />} className="w-24 h-16" />
+                {/* <FaFolder /> */}
+           {/* <FaExternalLinkAlt className="absolute top-4 right-4 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300" /> */}
             <span className="absolute inset-0.5 rounded-xl border border-white/5 pointer-events-none"></span>
           </div>
         </div>
